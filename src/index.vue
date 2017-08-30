@@ -2,7 +2,7 @@
   <div>
     <div class="my-gallery" :class="album_class">
       <a :href="image.src" v-for="image,key in images">
-        <img :src="image.thumb ? image.thumb : image.src" alt="" :title="image.title" :class="image_class" />
+        <img :src="image.thumb !== undefined ? image.thumb : image.src" alt="" :title="image.title" :class="image_class" />
       </a>
     </div>
   </div>
